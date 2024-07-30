@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
                     System.arraycopy(event.values, 0, angVelBody, 0, angVelBody.size)
                     // Angular Velocity in Body Frame
 
-                    convertToNED()
+                    convertToENU()
                 }
 
                 Sensor.TYPE_ROTATION_VECTOR -> {
@@ -69,7 +69,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
     }
 
     /// TODO edit this function
-    private fun convertToNED()
+    private fun convertToENU()
     {
         // Edit code here to use magRot & angVelBody to find angular velocity in ENU frame
         angVelNEU.value = FloatArray(3)
