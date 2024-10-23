@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         gyroSensor = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE)!!
         earthRotationVector = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)!!
-
+        accelSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)!!
 
         startSensorListening()
     }
